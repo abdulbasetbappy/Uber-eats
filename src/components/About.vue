@@ -20,7 +20,11 @@
           <br>
         Enjoy a verdant Garden to Glass experience. It’s in the view, it’s reflected in the design, and it infuses many drinks. In fact, all our delicious fresh ingredients are sustainably picked from our Jemima’s Kitchen Garden. Our flourishing range of cocktails, spirits, beers and wines are all made with integrity and offer something for every guest.
         </p>
-        <button>Our Menu         <font-awesome-icon class="buttonIcon" :icon="['fas', 'arrow-right']" /></button>
+        <button>
+          <router-link to="/Shop">
+            Our Menu         <font-awesome-icon class="buttonIcon" :icon="['fas', 'arrow-right']" />
+          </router-link>
+        </button>
       </div>
       <div class="image2">
         <img class="img1" src="../assets/Image/menu12.png" alt="">
@@ -39,6 +43,7 @@
   width: 100%;
   height: 100%;
   background-color: #fff;
+  margin-top: 50px;
   .header{
     max-width: 1250px;
     margin: auto;
@@ -145,6 +150,10 @@
         top: 0px;
         right: -28px;
         border-radius: 6px;
+      }
+      a{
+        text-decoration: none;
+        color: #fff;
       }
       }
     }

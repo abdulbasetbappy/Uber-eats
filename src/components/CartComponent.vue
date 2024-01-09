@@ -47,8 +47,10 @@
         </div>
         <div v-if="Coupondiv" class="coupon-div">
           <p>Apply Coupon</p>
-          <input v-model="couponCode" type="text" placeholder="Enter Coupon Code"> 
+          <div class="cdetails">
+            <input v-model="couponCode" type="text" placeholder="Enter Coupon Code"> 
           <button @click="applyCoupon(0.05)">Apply</button>
+          </div>
         </div>
         <div v-else>
           <h4 class="discount">Your 5% Discoount Applied Successfully!!</h4>
@@ -60,13 +62,13 @@
         <div class="order_final">
           <div class="total_Items">
             <p>Shipping Fee: </p>
-            <p>+$1.00</p>
+            <p v-if="cartStore.cartItems.length > 0"> +{{ fee }}</p>
+            <p v-else> +0</p>
           </div>
           <hr>
           <div class="total_Items">
             <p>Total Payment: </p>
-            <p v-if="finalTotal>0">${{ finalTotal+1 }}</p>
-            <p v-else>${{( cartStore.cartTotalPrice ) }}</p>
+            <p>${{ (Coupondiv ? cartStore.cartTotalPrice + fee : finalTotal + fee).toFixed(2) }}</p>
           </div>
         </div>
         <br>
@@ -84,6 +86,7 @@
   const finalTotal = ref( cartStore.cartTotalPrice );
   const discount =ref()
   const Coupondiv =ref(true);
+  const fee = ref(2);
 
   const removeFromCart = (index: number) => {
     cartStore.removeFromCart(index);
@@ -96,15 +99,21 @@
   const decrementQuantity = (index: number) => {
     cartStore.decrementQuantity(index);
   };
-  watch(() => cartStore.cartItems.length, (newTotal, oldTotal) => {
-  console.log('Cart Total Price changed:', newTotal);
-  if (Coupondiv.value) {
-    finalTotal.value = newTotal;
+  // Watch for changes in cartItems and update the fee accordingly
+watch(() => cartStore.cartItems.length, (newCartItemCount, oldCartItemCount) => {
+  fee.value = newCartItemCount > 0 ? 2 : 0;
+});
+// Watch for changes in cartTotalPrice and automatically apply a 5% discount
+watch(() => cartStore.cartTotalPrice, (newTotalPrice, oldTotalPrice) => {
+  if (!Coupondiv.value) {
+    // Apply a 5% discount
+    finalTotal.value = parseFloat((newTotalPrice * 0.95).toFixed(2));
+    discount.value = parseFloat((newTotalPrice * 0.05).toFixed(2));
   }
 });
   const applyCoupon = (percent: number) => {
     if (couponCode.value === 'VUEJS') {
-      finalTotal.value = parseFloat((cartStore.cartTotalPrice * (1 - percent)).toFixed(2)); 
+      finalTotal.value = parseFloat((cartStore.cartTotalPrice * (1 - percent)).toFixed(2) + fee); 
       discount.value = parseFloat((cartStore.cartTotalPrice * percent).toFixed(2));
       Coupondiv.value = false;
     } else {
@@ -125,6 +134,7 @@
     .Cart_Items {
       border-radius: 18px;
       padding: 10px;
+      margin-right: 30px;
       hr{
         margin: 10px 0px;
       }
@@ -144,7 +154,7 @@
         text-align: center;
         margin: 100px auto;
         h2{
-          margin-bottom: 10px;
+          margin-bottom: 30px;
         }
         a{
           text-decoration: none;
@@ -160,14 +170,15 @@
         }
       }
       .cart-item{
-        border: 1px solid #ccc;
+        border: 1px solid #ffffff;
         padding: 20px;
         border-radius: 18px;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         display: flex;
         justify-content: start;
         align-items: center;
         flex-direction: row;
+        box-shadow: 0px 0px 10px 0px #ccc;
         img{
           width: 200px;
           height: 150px;
@@ -179,15 +190,16 @@
           h3{
             font-weight: 600;
             font-size: 24px;
+            margin: 0px;
           }
           p{
             font-weight: 500;
             font-size: 16px;
+            margin: 0px;
           }
           .category{
             font-weight: 500;
-            font-size: 12px;
-            color: #747474;
+            font-size: 16px;
           }
           .Quantity{
             margin-bottom: 5px;
@@ -249,33 +261,38 @@
         background-color: #ebe8e8;
         padding: 15px;
         border-radius: 8px;
-        margin-bottom: 10px;
+        margin-bottom: 8px 10px;
         p{
-          margin-bottom: 10px;
-          font-weight: bold;
+          font-weight: 600;
+          margin: 0px;
+          margin-bottom: 8px;
         }
-        input{
-          padding: 10px;
-          border: none;
-          border-radius: 5px;
-          outline: none;
-          height: 36px;
-          font-size: 14px;
-          color: #8a8a8a;
-          font-family: 'poppins', sans-serif;
-        }
-        button{
-          padding: 5px;
-          border: none;
-          background-color: #FF8800;
-          cursor: pointer;
-          border-radius: 6px;
-          margin-left: 10px;
-          color: #ffffff;
-          padding: 8px 12px;
-          font-family: 'poppins', sans-serif;
-          &:hover{
-            background-color: #fa801d;
+        .cdetails{
+          text-align: center;
+          input{
+            padding: 10px;
+            border: none;
+            max-width: 170px;
+            border-radius: 5px;
+            outline: none;
+            height: 20px;
+            font-size: 14px;
+            color: #8a8a8a;
+            font-family: 'poppins', sans-serif;
+          }
+          button{
+            padding: 5px;
+            border: none;
+            background-color: #FF8800;
+            cursor: pointer;
+            border-radius: 6px;
+            margin-left: 10px;
+            color: #ffffff;
+            padding: 10px 12px;
+            font-family: 'poppins', sans-serif;
+            &:hover{
+              background-color: #fa801d;
+            }
           }
         }
       }

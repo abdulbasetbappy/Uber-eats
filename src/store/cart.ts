@@ -2,6 +2,10 @@ import { defineStore } from 'pinia';
 interface CartState {
     cartItems: CartItem[];
     searchQuery: string;
+    cartTotal: number;
+    cartTotalPrice: number;
+    cartTotalWithShipping: number;
+    finalValueWithDiscount: number;
 }
 
 interface CartItem {

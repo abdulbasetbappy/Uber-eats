@@ -9,11 +9,11 @@
           and order with unparalleled.</p>
         <button class="btn1">Livraison</button>
         <button class="btn2">Click & Collect</button>
-        <select id="location" v-model="selectedLocation"
+        <select class="option" id="location" v-model="selectedLocation"
         icon="map-marker-alt"
         >
-          <option value="" disabled>Select an option</option>
-          <option v-for="location in hardcodedLocations" :key="location.id" :value="location.id">
+          <option class="disabled_option" value="" disabled>Select an option</option>
+          <option class="main_option" v-for="location in hardcodedLocations" :key="location.id" :value="location.id">
             {{ location.name }}
           </option>
         </select>
@@ -50,7 +50,8 @@
     </div>
     <TabComponent />
     <div class="grid-container3">
-      <div class="section1">
+      <div class="main_container">
+        <div class="section1">
         <p class="subtitle">Contact Us</p>
         <h2 class="title">Get In Touch</h2>
         <div class="firstRow">
@@ -61,7 +62,7 @@
             <button>Submit</button>
           </div>
           <div class="googleMap">
-            <img src="../assets/Image/Rectangle 68.png" alt="">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14612.006932029273!2d90.41559710492736!3d23.71163215251017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b9cc7d566d03%3A0x2472a49ac0504cd2!2sJatra%20Bari%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1704792411575!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
         <div class="secondRow">
@@ -91,6 +92,7 @@
           </div>
         </div>
       </div>
+      </div>
     </div>
   </div>
 </template>
@@ -100,9 +102,10 @@ import TabComponent from './TabComponent.vue';
 import { ref } from 'vue';
 const selectedLocation = ref('');
 const hardcodedLocations = ref([
-  { id: 1, name: 'Location 1' },
-  { id: 2, name: 'Location 2' },
-  { id: 3, name: 'Location 3' },
+  { id: 1, name: 'Dhanmodi, Dhaka' },
+  { id: 2, name: 'Jatrabari,Dhaka' },
+  { id: 3, name: 'Mirpur-10, Dhaka' },
+  { id: 3, name: 'Mohommodpur, Dhaka' },
   // Add more locations as needed
 ]);
 </script>
@@ -288,6 +291,10 @@ const hardcodedLocations = ref([
       margin: auto;
       max-width: 100%;
       background-color: #ffffff;
+      .main_container{
+        max-width: 80%;
+        margin: auto;
+      }
       .section1{
         max-width: 1300px;
         margin: auto;
@@ -347,9 +354,10 @@ const hardcodedLocations = ref([
           }
           .googleMap{
             margin-left: 50px;
-            img{
+            iframe{
               width: 100%;
               height: 100%;
+              border-radius: 18px;
             }
           }
         }
