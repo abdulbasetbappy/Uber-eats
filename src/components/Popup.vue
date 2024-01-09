@@ -1,22 +1,31 @@
 <template>
-  <div v-if="selectedResult != null && showPopup" class="popup">
+  <Transition name="slide-fade">
+    <div v-if="selectedResult != null && showPopup" class="popup">
     <img :src="selectedResult.image" alt="Product Image" />
     <div class="popup-details">
       <p class="product-name">{{ selectedResult.name }}</p>
       <p class="product-category">{{ selectedResult.category }}</p>
       <p class="product-description">{{ selectedResult.description }}</p>
       <p class="product-price">${{ selectedResult.price.toFixed(2) }}</p>
-      <p class="product-ratings">Ratings: {{ selectedResult.ratings }}</p>
+      <div class="product_ratings">
+        <StarRating class="rating" :rating="selectedResult.ratings" />
+      </div>
+
       <!-- Add more details as needed -->
       <button @click="addToCart(selectedResult)">Add to Cart</button>
-      <button @click="closePopup">Close</button>
+      <button class="cross_btn" @click="closePopup">
+        <font-awesome-icon :icon="['fas', 'xmark']" class="Cross_icon" />
+      </button>
     </div>
   </div>
+  </Transition>
+
 </template>
 
 <script setup lang="ts">
 import { ref, defineProps } from 'vue';
 import { useCartStore } from '../store/cart';
+import StarRating from './StarRating.vue';
 
 const cartStore = useCartStore();
 const { selectedResult } = defineProps(['selectedResult', 'closePopup']);
@@ -31,6 +40,19 @@ const addToCart = (item : any) => {
 
 <!-- Add styles as needed -->
 <style lang="scss" scoped>
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
 .popup {
   position: fixed;
   top: 50%;
@@ -47,8 +69,8 @@ const addToCart = (item : any) => {
   text-align: center;
 
   img {
-    max-width: 100%;
-    height: auto;
+    max-width: 300px;
+    height: 200px;
     border-radius: 4px;
     margin-bottom: 10px;
   }
@@ -56,34 +78,58 @@ const addToCart = (item : any) => {
   .popup-details {
     display: flex;
     flex-direction: column;
-    gap: 10px;
 
     .product-name {
-      font-size: 18px;
+      font-size: 28px;
       font-weight: bold;
+      margin: 0px;
     }
-
+    .product-category{
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0px;
+    }
     .product-price {
       font-size: 16px;
+      margin: 0px;
     }
-
     .product-description {
       font-size: 14px;
       color: #666;
     }
-
+    .product_ratings{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: medium;
+    }
     button {
       padding: 8px 16px;
       font-size: 14px;
       cursor: pointer;
-      background-color: #007bff;
+      background-color: #FF8800;
       color: white;
       border: none;
       border-radius: 4px;
+      font-family: 'poppins';
       transition: background-color 0.3s ease;
 
       &:hover {
-        background-color: #0056b3;
+        background-color: #df7804;
+      }
+    }
+    .cross_btn{
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      background-color: transparent;
+      border: none;
+      &:hover {
+        background-color: #e9e9e9;
+      }
+      .Cross_icon{
+        color: #FF8800;
+        font-size: 20px;
       }
     }
   }

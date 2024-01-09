@@ -21,7 +21,7 @@
                     <!--search-suggestions-->
                     <div class="search-suggestions" v-if="searchQuery.length > 0">
                         <div v-for="result in searchResults" :key="result.name" @click="selectSearchResult(result)">
-                            <img src="../assets/Image/Default_Food.jpg" alt=" " />
+                            <img :src="result.image" alt=" " />
                             <div class="search-result-details">
                                 <p class="result-name">{{ result.name }}</p>
                                 <p class="result-price">${{ result.price.toFixed(2) }}</p>
@@ -153,6 +153,7 @@ const selectSearchResult = (result:any) => {
                     display: flex;
                     justify-items: center;
                     align-items: center;
+                    transition: all 0.3s ease-in-out;
                     img{
                         width: 50px;
                         height: 40px;

@@ -8,6 +8,7 @@ export const menuItems = [
         description: 'Fresh tomato, mozzarella, basil.',
         ratings: 4.5,
         discount: null,
+        image:'https://png.pngtree.com/png-vector/20230909/ourmid/pngtree-margherita-pizza-in-a-dish-png-image_10012685.png'
     },
     {
         name: 'Pepperoni Passion',
@@ -16,6 +17,7 @@ export const menuItems = [
         description: 'Classic pepperoni slices with melted mozzarella.',
         ratings: 4.7,
         discount: null,
+        image:'https://png.pngtree.com/png-vector/20231215/ourlarge/pngtree-a-slice-pepperoni-pizza-clip-art-png-image_11324300.png'
     },
     {
         name: 'Mediterranean Delight',
@@ -24,6 +26,7 @@ export const menuItems = [
         description: 'Kalamata olives, feta cheese, cherry tomatoes, and basil.',
         ratings: 4.5,
         discount: 10,
+        image:'https://img.freepik.com/premium-photo/mediterranean-meze-delight-transparent-background_894067-17836.jpg'
     },
     {
         name: 'Supreme Feast',
@@ -32,6 +35,7 @@ export const menuItems = [
         description: 'A combination of sausage, mushrooms, bell peppers, and onions.',
         ratings: 4.6,
         discount: null,
+        image:'https://mymarios.com/pystedod/Meat-Feast-MARIOS2-MJ7094-29.5.2020-online-1.png'
     },
     {
         name: 'BBQ Chicken Delight',
@@ -40,6 +44,7 @@ export const menuItems = [
         description: 'Grilled chicken, red onions, BBQ sauce, and cilantro.',
         ratings: 4.8,
         discount: null,
+        image:'https://static.vecteezy.com/system/resources/previews/021/665/576/original/delicious-grilled-chicken-cutout-png.png'
     },
     {
         name: 'Veggie Extravaganza',
@@ -48,6 +53,7 @@ export const menuItems = [
         description: 'A medley of fresh vegetables like bell peppers, onions, mushrooms, and olives.',
         ratings: 4.4,
         discount: 15,
+        image:'https://tatis.my/demo/pizza/wp-content/uploads/2019/01/Product9-1.png'
     },
     {
         name: 'Hawaiian Paradise',
@@ -56,6 +62,7 @@ export const menuItems = [
         description: 'Ham, pineapple, and bacon for a tropical twist.',
         ratings: 4.6,
         discount: null,
+        image:'https://png.pngtree.com/png-clipart/20231111/original/pngtree-dive-into-the-pineapple-paradise-of-hawaiian-pizza-png-image_13534949.png'
     },
     {
         name: 'Margherita Deluxe',
@@ -64,6 +71,7 @@ export const menuItems = [
         description: 'Buffalo mozzarella, cherry tomatoes, and fresh basil leaves.',
         ratings: 4.5,
         discount: null,
+        image:'https://png.pngtree.com/png-vector/20230909/ourmid/pngtree-margherita-pizza-in-a-dish-png-image_10012685.png'
     },
     {
         name: 'White Garlic Pizza',
@@ -72,6 +80,7 @@ export const menuItems = [
         description: 'Garlic-infused olive oil, ricotta cheese, and spinach.',
         ratings: 4.3,
         discount: 10,
+        image:'https://www.pngkit.com/png/detail/215-2154539_cheese-garlic-cheese-and-garlic-pizza.png',
     },
     {
         name: 'Meat Lovers\' Feast',
@@ -80,6 +89,7 @@ export const menuItems = [
         description: 'A carnivore\'s dream with pepperoni, sausage, bacon, and ham.',
         ratings: 4.9,
         discount: null,
+        image:'https://www.nicepng.com/png/detail/2-23197_mega-meat-pizza-pizza.png'
     },
     {
         name: 'Classic Cheeseburger',
@@ -88,7 +98,7 @@ export const menuItems = [
         description: 'Juicy beef patty, American cheese, lettuce, tomato, and pickles.',
         ratings: 4.5,
         discount: null,
-        image:'/src/assets/Image/Burger/00.png'
+        image:'https://static.vecteezy.com/system/resources/previews/022/911/684/non_2x/classic-chicken-burger-free-illustration-icon-free-png.png'
     },
     {
         name: 'BBQ Bacon Burger',
@@ -97,6 +107,7 @@ export const menuItems = [
         description: 'Grilled beef patty, crispy bacon, cheddar cheese, and BBQ sauce.',
         ratings: 4.7,
         discount: 15,
+        image: 'https://t4.ftcdn.net/jpg/05/85/29/13/360_F_585291348_nfsxpgUHUkphTWtkruvHW7lGvF6IdSvM.jpg',
     },
     {
         name: 'Veggie Burger Deluxe',
@@ -105,6 +116,7 @@ export const menuItems = [
         description: 'Vegetarian patty, Swiss cheese, avocado, lettuce, and special sauce.',
         ratings: 4.2,
         discount: null,
+        image: 'https://static.vecteezy.com/system/resources/previews/022/598/687/original/tasty-beef-burger-png.png',
     },
     {
         name: 'Spicy Chicken Burger',
@@ -113,6 +125,7 @@ export const menuItems = [
         description: 'Crispy chicken patty, pepper jack cheese, jalapeños, and spicy mayo.',
         ratings: 4.6,
         discount: null,
+        image: 'https://t4.ftcdn.net/jpg/05/61/82/83/360_F_561828375_KCtTuNdpQTjHrMqDrcoCpoLaYhLrZQdI.jpg',
     },
     {
         name: 'Mushroom Swiss Burger',
@@ -121,6 +134,7 @@ export const menuItems = [
         description: 'Beef patty, Swiss cheese, sautéed mushrooms, and truffle aioli.',
         ratings: 4.4,
         discount: null,
+        image: 'https://png.pngtree.com/png-clipart/20230928/original/pngtree-burger-png-images-png-image_13164941.png',
     },
     {
         name: 'Beyond Meat Burger',
@@ -129,6 +143,7 @@ export const menuItems = [
         description: 'Plant-based patty, vegan cheese, lettuce, tomato, and vegan mayo.',
         ratings: 4.3,
         discount: null,
+        image: 'https://t3.ftcdn.net/jpg/06/01/07/12/360_F_601071205_jxLMJzJKNPM1g5ciDuW32Nj8vO5ltNhn.jpg',
     },
     {
         name: 'Double Bacon Cheeseburger',
@@ -137,6 +152,7 @@ export const menuItems = [
         description: 'Two beef patties, double bacon, American cheese, lettuce, and pickles.',
         ratings: 4.8,
         discount: null,
+        image:'https://t3.ftcdn.net/jpg/06/01/07/12/360_F_601071205_jxLMJzJKNPM1g5ciDuW32Nj8vO5ltNhn.jpg'
     },
     {
         name: 'Avocado Turkey Burger',
@@ -145,6 +161,7 @@ export const menuItems = [
         description: 'Ground turkey patty, avocado, Swiss cheese, lettuce, and cranberry mayo.',
         ratings: 4.5,
         discount: 10,
+        image:'https://atlas-content-cdn.pixelsquid.com/stock-images/burger-8d8RmwB-600.jpg'
     },
     {
         name: 'Chocolate Lava Cake',
@@ -153,6 +170,7 @@ export const menuItems = [
         description: 'Warm chocolate cake with a gooey molten center, served with vanilla ice cream.',
         ratings: 4.8,
         discount: null,
+        image:'https://ifigourmet.com/cdn/shop/products/22g242_1200x1200.png?v=1614894430',
     },
     {
         name: 'New York Cheesecake',
@@ -161,6 +179,7 @@ export const menuItems = [
         description: 'Creamy cheesecake with a graham cracker crust, topped with strawberry compote.',
         ratings: 4.6,
         discount: null,
+        image:'https://static.vecteezy.com/system/resources/previews/025/065/317/non_2x/cheesecake-with-ai-generated-free-png.png',
     },
     {
         name: 'Tiramisu',
@@ -169,6 +188,7 @@ export const menuItems = [
         description: 'Classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cream.',
         ratings: 4.7,
         discount: null,
+        image:'https://png.pngtree.com/png-vector/20230902/ourmid/pngtree-tiramisu-cake-isolated-png-image_9242463.png',
     },
     {
         name: 'Fruit Sorbet Trio',
@@ -177,6 +197,7 @@ export const menuItems = [
         description: 'Refreshing trio of fruit sorbets: mango, raspberry, and lemon.',
         ratings: 4.5,
         discount: 20,
+        image:'https://5.imimg.com/data5/ME/QF/GLADMIN-33593898/trio-raspberry-vanilla-and-mango-bar-500x500.png',
     },
     {
         name: 'Caramel Pecan Brownie Sundae',
@@ -185,6 +206,7 @@ export const menuItems = [
         description: 'Fudgy brownie topped with caramel sauce, pecans, and a scoop of vanilla ice cream.',
         ratings: 4.9,
         discount: null,
+        image:'https://png.pngtree.com/png-clipart/20210613/original/pngtree-browni-dessert-diet-meal-png-image_6404131.jpg',
     },
     {
         name: 'Classic Mojito',
@@ -193,6 +215,7 @@ export const menuItems = [
         description: 'Freshly muddled mint, lime, and simple syrup, topped with soda water and ice.',
         ratings: 4.4,
         discount: null,
+        image:'https://static.vecteezy.com/system/resources/previews/027/145/860/original/mojito-summer-refreshing-cocktail-with-ice-and-mint-perfect-for-drink-catalog-ai-generated-png.png',
     },
     {
         name: 'Strawberry Lemonade',
@@ -201,6 +224,7 @@ export const menuItems = [
         description: 'Sweet and tart lemonade with fresh strawberry puree, served over ice.',
         ratings: 4.6,
         discount: null,
+        image:'https://static.vecteezy.com/system/resources/previews/027/243/027/original/strawberry-lemonade-sticker-cool-colors-kawaii-clip-art-illustration-transparent-background-generative-ai-png.png',
     },
     {
         name: 'Iced Caramel Macchiato',
@@ -209,6 +233,7 @@ export const menuItems = [
         description: 'Espresso mixed with vanilla syrup, milk, and caramel, poured over ice.',
         ratings: 4.7,
         discount: null,
+        image:'https://png.pngitem.com/pimgs/s/529-5290701_caff-macchiato-hd-png-download.png',
     },
     {
         name: 'Mango Tango Smoothie',
@@ -217,6 +242,7 @@ export const menuItems = [
         description: 'Blended smoothie with mango, banana, yogurt, and orange juice.',
         ratings: 4.5,
         discount: 15,
+        image:'https://png.pngtree.com/png-vector/20230325/ourmid/pngtree-summer-orange-smoothie-png-image_6667736.png',
     },
     {
         name: 'Green Tea Matcha Latte',
@@ -225,6 +251,7 @@ export const menuItems = [
         description: 'Creamy matcha green tea latte made with steamed milk.',
         ratings: 4.8,
         discount: null,
+        image:'https://www.pngitem.com/pimgs/b/69-690442_green-tea-transparent-images-green-tea-images-png.png',
     },
     {
         name: 'Pineapple Coconut Cooler',
@@ -233,6 +260,7 @@ export const menuItems = [
         description: 'Refreshing blend of pineapple juice, coconut cream, and crushed ice.',
         ratings: 4.3,
         discount: null,
+        image:'https://static.vecteezy.com/system/resources/previews/027/291/891/original/tropical-cocktail-with-pineapple-coconut-and-umbrella-on-transparent-background-free-png.png',
     },
     {
         name: 'Cucumber Mint Infused Water',
@@ -241,6 +269,7 @@ export const menuItems = [
         description: 'Cooling and hydrating water infused with cucumber slices and fresh mint leaves.',
         ratings: 4.9,
         discount: 10,
+        image:'https://img.freepik.com/premium-photo/detox-water-with-lemon-lime-cucumber-ginger-mint-ingredients-its-preparation-healthy-food-rich-vitamins-antioxidants_332246-220.jpg',
     },
     {
         name: 'Chai Tea Latte',
@@ -249,6 +278,7 @@ export const menuItems = [
         description: 'Spiced black tea with steamed milk and a touch of honey.',
         ratings: 4.6,
         discount: null,
+        image:'https://d3gg7p8kl1yfy0.cloudfront.net/Recipe-Detail-Oat_Milk_Latte_2022.jpg',
     },
     {
         name: 'Blueberry Basil Lemonade',
@@ -257,6 +287,7 @@ export const menuItems = [
         description: 'Lemonade with blueberry and basil infusion, served over ice.',
         ratings: 4.7,
         discount: null,
+        image:'https://www.afarmgirlsdabbles.com/wp-content/uploads/2022/06/blueberry-basil-lemonade_afarmgirlsdabbles_01v.jpg',
     },
     {
         name: 'Espresso Martini',
@@ -265,6 +296,7 @@ export const menuItems = [
         description: 'Vodka, coffee liqueur, and freshly brewed espresso shaken with ice.',
         ratings: 4.5,
         discount: null,
+        image:'https://simply-delicious-food.com/wp-content/uploads/2023/05/Blackberry-lemonade3.jpg',
     },
     {
         name: 'Classic Pancake Stack',
@@ -273,6 +305,7 @@ export const menuItems = [
         description: 'Fluffy pancakes served with maple syrup and a choice of fresh fruits or bacon.',
         ratings: 4.6,
         discount: null,
+        image:'https://pngimg.com/uploads/pancake/pancake_PNG120.png',
       },
       {
         name: 'Avocado Toast with Poached Eggs',
@@ -281,6 +314,7 @@ export const menuItems = [
         description: 'Sourdough toast topped with smashed avocado, poached eggs, and cherry tomatoes.',
         ratings: 4.7,
         discount: null,
+        image:'https://static.jow.fr/880x880/recipes/4nBoEEPf2543vg.png',
       },
       {
         name: 'Vegetarian Omelette',
@@ -289,6 +323,7 @@ export const menuItems = [
         description: 'Three-egg omelette with mushrooms, bell peppers, onions, and cheese.',
         ratings: 4.5,
         discount: 10,
+        image:'https://pngimg.com/d/omelette_PNG22.png',
       },
       {
         name: 'Greek Yogurt Parfait',
@@ -297,6 +332,7 @@ export const menuItems = [
         description: 'Layered Greek yogurt with granola, mixed berries, and honey drizzle.',
         ratings: 4.8,
         discount: null,
+        image:'https://i.pinimg.com/736x/3f/cd/d3/3fcdd350062147e0c18ef7cb40b20721.jpg',
       },
       {
         name: 'Breakfast Burrito',
@@ -305,6 +341,7 @@ export const menuItems = [
         description: 'Flour tortilla filled with scrambled eggs, black beans, cheese, and salsa.',
         ratings: 4.4,
         discount: null,
+        image:'https://images.pngnice.com/download/2322/Breakfast-burrito-PNG-HD-Isolated.png',
       },
       {
         name: 'Butter Chicken',
@@ -313,6 +350,7 @@ export const menuItems = [
         description: 'Tender chicken cooked in a creamy tomato and butter sauce, served with naan.',
         ratings: 3.1,
         discount: null,
+        image:'https://static.vecteezy.com/system/resources/previews/025/228/103/original/fresh-indian-butter-chicken-with-rice-isolated-on-transparent-background-png.png',
       },
       {
         name: 'Chicken Biryani',
@@ -321,6 +359,7 @@ export const menuItems = [
         description: 'Fragrant basmati rice cooked with chicken, aromatic spices, and garnished with fried onions.',
         ratings: 4.7,
         discount: 10,
+        image:'https://png.pngtree.com/png-clipart/20230527/original/pngtree-chicken-biryani-top-view-png-image_9171063.png',
       },
       {
         name: 'Paneer Tikka Masala',
@@ -329,6 +368,7 @@ export const menuItems = [
         description: 'Grilled paneer cubes in a rich and spicy tomato-based curry.',
         ratings: 4.5,
         discount: null,
+        image:'https://png.pngtree.com/png-clipart/20230912/original/pngtree-paneer-butter-masala-png-image_11051765.png',
       },
       {
         name: 'Vegetable Samosa',
@@ -337,6 +377,7 @@ export const menuItems = [
         description: 'Crispy pastry filled with spiced potatoes, peas, and herbs, served with chutney.',
         ratings: 4.6,
         discount: null,
+        image:'https://img.pikbest.com/origin/09/19/91/64UpIkbEsT6m5.png!sw800',
       },
       {
         name: 'Dal Makhani',
@@ -345,6 +386,7 @@ export const menuItems = [
         description: 'Slow-cooked black lentils and kidney beans in a creamy tomato sauce.',
         ratings: 4.4,
         discount: null,
+        image:'https://t4.ftcdn.net/jpg/01/84/58/83/360_F_184588398_RczrKKQfy5GZWSd1rvCYu6GEPlsCd9rv.jpg',
       },
       {
         name: 'Aloo Gobi',
@@ -353,6 +395,7 @@ export const menuItems = [
         description: 'Stir-fried cauliflower and potatoes with Indian spices.',
         ratings: 4.3,
         discount: null,
+        image:'https://www.pngitem.com/pimgs/m/317-3177451_aloo-gobi-png-download-transparent-png.png',
       },
       {
         name: 'Chana Masala',
@@ -361,6 +404,7 @@ export const menuItems = [
         description: 'Chickpeas cooked in a flavorful tomato-based curry.',
         ratings: 4.6,
         discount: 15,
+        image:'https://img.freepik.com/premium-photo/spicy-chickpea-curry-chana-masala-choley-bowl-with-chapati-salad-traditional-north-indian-dish_466689-6355.jpg',
       },
       {
         name: 'Tandoori Chicken',
@@ -369,5 +413,6 @@ export const menuItems = [
         description: 'Marinated chicken skewers grilled to perfection in a tandoor.',
         ratings: 4.9,
         discount: null,
+        image:'https://www.pngitem.com/pimgs/m/119-1192275_tandoori-chicken-plate-png-transparent-png.png',
       },
 ];

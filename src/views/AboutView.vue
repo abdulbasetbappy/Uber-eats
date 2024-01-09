@@ -1,10 +1,11 @@
 <template>
-    <div>
-        <h1>About Us</h1>
-    </div>
+  <div>
+    <AboutComponent />
+  </div>
 </template>
 
-<script>
+<script lang="ts" setup>
+import AboutComponent from '../components/About.vue';
 </script>
 
 <style lang="scss" scoped>

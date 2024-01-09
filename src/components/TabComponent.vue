@@ -12,16 +12,20 @@
           {{ category }}
         </div>
       </div>
-  
-    <div class="menu-item">
-      <div v-for="item in slicedItems" :key="item.name" class="card">
-        <img src="../assets/Image/Default_Food.jpg" :alt="item.name" />
-        <h3>{{ item.name }}</h3>
-        <p>${{ item.price.toFixed(2) }}</p>
-        <StarRating :rating="item.ratings" />
-        <button @click="addToCart(item)">Add to Cart</button>
+      <div class="menu-item">
+        <div v-for="item in slicedItems" :key="item.name" class="card">
+          <img :src="item.image" :alt="item.name" />
+          <h3>{{ item.name }}</h3>
+          <p>${{ item.price.toFixed(2) }}</p>
+          <StarRating :rating="item.ratings" />
+          <button @click="addToCart(item)">Add to Cart</button>
+        </div>
       </div>
-    </div>
+      <button class="last_btn"><router-link to="/Shop">
+        See Our Menu
+        <font-awesome-icon class="buttonIcon" :icon="['fas', 'arrow-right']" />
+      </router-link>
+      </button> 
     </div>
   </template>
   
@@ -129,6 +133,31 @@
           border-radius: 6px;
           cursor: pointer;
         }
+      }
+    }
+    .last_btn{
+      width: 13rem;
+      height: 3rem;
+      border-radius: 6px;
+      margin-bottom: 50px;
+      font-family: 'poppins';
+      border: none;
+      font-size: 16px;
+      font-weight: 600;
+      background-color: #FF8800;
+      color: #ffffff;
+      position: relative;
+      a{
+        color: #ffffff;
+        text-decoration: none;
+      }
+      .buttonIcon{
+        background-color: #fca13a;
+        padding: 16px;
+        position: absolute;
+        top: 0;
+        right: -24px;
+        border-radius: 6px;
       }
     }
   }

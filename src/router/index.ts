@@ -6,6 +6,7 @@ import DefaultLayout from '../layouts/DefaultLayout.vue'
 import ShopView from '../views/ShopView.vue'
 import CartView from '../views/CartView.vue'
 import AboutView from '../views/AboutView.vue'
+import NotFound from '../views/404View.vue'
 
 const routes = [
   {
@@ -16,25 +17,26 @@ const routes = [
         path: '',
         name: 'Home',
         component: HomeView,
-        meta: { transition: 'fade-in' },
       },
       {
         path: '/About',
         name: 'About',
         component: AboutView,
-        meta: { transition: 'fade-in' },
       },
       {
         path: '/Shop',
         name: 'Shop',
         component: ShopView,
-        meta: { transition: 'fade-in' },
       },
       {
         path: '/Cart',
         name: 'Cart',
         component: CartView,
-        meta: { transition: 'fade-in' },
+      },
+      {
+        path: '/:pathMatch(.*)*',
+        name: 'NotFound',
+        component: NotFound,
       },
     ],
   },
@@ -43,6 +45,13 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior (to, from, savedPosition) {
+    return savedPosition ||  new Promise((resolve) => {
+      setTimeout(() => {
+        resolve({ top: 0, behavior: 'smooth' })
+      }, 300)
+    })
+  }  
 });
 
 export default router;

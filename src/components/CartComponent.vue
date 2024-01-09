@@ -14,7 +14,7 @@
         </div>
         <div v-else>
           <div v-for="(item, index) in cartStore.cartItems" :key="index" class="cart-item">
-            <img src="../assets/Image/Default_Food.jpg" alt="">
+            <img :src="item.image" alt="">
             <div class="details">
               <h3>{{ item.name }}</h3>
               <p>Price: ${{ item.price }}</p>
@@ -66,11 +66,11 @@
           <div class="total_Items">
             <p>Total Payment: </p>
             <p v-if="finalTotal>0">${{ finalTotal+1 }}</p>
-            <p v-else>${{( cartStore.cartTotalPrice+1).toFixed(2) }}</p>
+            <p v-else>${{( cartStore.cartTotalPrice ) }}</p>
           </div>
         </div>
         <br>
-        <button class="Checkout">Checkout</button>
+        <button class="Checkout">Place Order</button>
       </div>
     </div>
   </template>

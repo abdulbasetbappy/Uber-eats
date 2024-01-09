@@ -10,10 +10,12 @@
           {{ category }}
         </div>
       </div>
-  
       <div class="data">
+        <transition-group name="list" tag="div">
         <div v-for="item in filteredItems" :key="item.name" class="menu-item">
-          <img src="../assets/Image/Default_Food.jpg" alt="">
+          <div class="img_div">
+            <img :src="item.image" :alt="item.name">
+          </div>
           <div class="main_details">
             <div class="details">
               <h3>{{ item.name }}</h3>
@@ -27,6 +29,7 @@
             </div>
           </div>
         </div>
+      </transition-group>
       </div>
     </div>
   </template>
@@ -66,6 +69,16 @@
     flex-direction: row;
     margin: 50px auto;
     font-family: 'poppins', sans-serif;
+    /* we will explain what these classes do next! */
+    .list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease;
+}
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
     .categories {
       width: 200px; /* Adjust the width as needed */
       padding: 10px;
@@ -100,11 +113,18 @@
     margin-bottom: 10px;
     display: flex;
     align-items: center;
-    img{
+    transition: all 0.3s ease-in-out;
+    .img_div{
       width: 200px;
       height: 150px;
       border-radius: 8px;
       object-fit: cover;
+      img{
+        width: 200px;
+        height: 150px;
+        border-radius: 8px;
+        object-fit: cover;
+      }
     }
     .main_details{
       width: 100%;
@@ -117,11 +137,13 @@
         h3{
           font-weight: 600;
           font-size: 28px;
+          margin: 0px;
         }
         p{
           font-weight: 500;
           font-size: 16px;
           max-width: 450px;
+          margin: 0px;
         }
         .category{
           font-weight: 600;
