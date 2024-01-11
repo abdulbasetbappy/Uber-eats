@@ -1,6 +1,7 @@
 <template>
   <Transition name="slide-fade">
     <div v-if="selectedResult != null && showPopup" class="popup">
+      <!--Popup Details-->
     <img :src="selectedResult.image" alt="Product Image" />
     <div class="popup-details">
       <p class="product-name">{{ selectedResult.name }}</p>
@@ -11,7 +12,7 @@
         <StarRating class="rating" :rating="selectedResult.ratings" />
       </div>
 
-      <!-- Add more details as needed -->
+      <!-- Popup Buttons -->
       <button @click="addToCart(selectedResult)">Add to Cart</button>
       <button class="cross_btn" @click="closePopup">
         <font-awesome-icon :icon="['fas', 'xmark']" class="Cross_icon" />
@@ -23,36 +24,25 @@
 </template>
 
 <script setup lang="ts">
+// Import necessary components
 import { ref, defineProps } from 'vue';
 import { useCartStore } from '../store/cart';
 import StarRating from './StarRating.vue';
 
+// Initialize the cart store and other reactive variables
 const cartStore = useCartStore();
 const { selectedResult } = defineProps(['selectedResult', 'closePopup']);
-const showPopup = ref(true); // Track the visibility of the popup
+const showPopup = ref(true);
 
-
+// Initialize the addToCart function
 const addToCart = (item : any) => {
     cartStore.addToCart(item);
   };
 
 </script>
 
-<!-- Add styles as needed -->
 <style lang="scss" scoped>
-.slide-fade-enter-active {
-  transition: all 0.3s ease-out;
-}
-
-.slide-fade-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
-}
-
-.slide-fade-enter-from,
-.slide-fade-leave-to {
-  transform: translateX(20px);
-  opacity: 0;
-}
+@use "../styles/scss/utils/mixins" as mixins;
 .popup {
   position: fixed;
   top: 50%;
@@ -104,6 +94,7 @@ const addToCart = (item : any) => {
       font-size: medium;
     }
     button {
+      margin-top: 10px;
       padding: 8px 16px;
       font-size: 14px;
       cursor: pointer;
@@ -132,6 +123,43 @@ const addToCart = (item : any) => {
         font-size: 20px;
       }
     }
+  }
+  .slide-fade-enter-active {
+    transition: all 0.3s ease-out;
+  }
+
+  .slide-fade-leave-active {
+    transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+  }
+
+  .slide-fade-enter-from,
+  .slide-fade-leave-to {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+}
+@include mixins.respond-to(0px, 768px) {
+  .popup {
+    max-width: 350px;
+    width: 100%;
+    .popup-details {
+    .product-name {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0px;
+    }
+  }
+  }
+}
+@include mixins.respond-to(769px, 1024px) {
+  .popup {
+    max-width: 400px;
+    width: 100%;
+    .popup-details {
+    .product-name {
+      font-size: 28px;
+    }
+  }
   }
 }
 </style>

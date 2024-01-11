@@ -1,5 +1,7 @@
 <template>
   <div class="container">
+
+    <!--Hero Section 01-->
     <div class="grid-container1">
       <div class="section1">
         <h2>Savor the Flavors <br>
@@ -22,6 +24,8 @@
         <img src="../assets/Image/Plates.png" alt="Plates">
       </div>
     </div>
+
+    <!--Hero Section 02-->
     <div class="grid-container2">
       <div class="section1">
         <img src="../assets/Image/Background02.png" alt="">
@@ -48,7 +52,11 @@
         <div class="gradient-overlay"></div>
       </div>
     </div>
+
+    <!--Hero Section 03-->
     <TabComponent />
+
+    <!--Hero Section 04-->
     <div class="grid-container3">
       <div class="main_container">
         <div class="section1">
@@ -98,8 +106,11 @@
 </template>
 
 <script setup lang="ts">
+//Import the Component & Necessary Things 
 import TabComponent from './TabComponent.vue';
 import { ref } from 'vue';
+
+//Define the variables
 const selectedLocation = ref('');
 const hardcodedLocations = ref([
   { id: 1, name: 'Dhanmodi, Dhaka' },
@@ -108,9 +119,11 @@ const hardcodedLocations = ref([
   { id: 3, name: 'Mohommodpur, Dhaka' },
   // Add more locations as needed
 ]);
+
 </script>
 
   <style lang="scss" scoped>
+  //Import Variables and Mixins
   @use '../styles/scss/utils/index.scss' as variables;
   @import '../styles/scss/main.scss';
 
