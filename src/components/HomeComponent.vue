@@ -331,8 +331,8 @@ const hardcodedLocations = ref([
           .inputSection{
             background-color: variables.$background-color-Secondary;
             margin-right: 50px;
-            padding:  60px ;
-            border-radius: 36px;
+            padding:  40px ;
+            border-radius: 18px;
             input{
               width: 100%;
               height: 3rem;
@@ -383,24 +383,24 @@ const hardcodedLocations = ref([
             display: grid;
             grid-template-columns: 1fr 3fr;
             margin-bottom: 1.5rem;
-            padding: 25px;
+            padding: 15px;
             background-color: variables.$background-color-Secondary;
-            border-radius: 35px;
+            border-radius: 18px;
             justify-items: start;
             align-items: center;
             img{
-              width: 80%;
-              height: 80%;
+              width: 60%;
+              height: 60%;
             }
             .text{
-              margin-left: 20px;
+              margin-left: 0px;
               h3{
-                font-size: 26px;
+                font-size: 24px;
                 font-weight: 600;
                 color: #000000;
               }
               p{
-                font-size: 18px;
+                font-size: 14px;
                 font-weight: 400;
                 color: #5a5a5a;
               }

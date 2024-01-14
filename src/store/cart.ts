@@ -4,11 +4,10 @@ interface CartState {
     searchQuery: string;
     cartTotal: number;
     cartTotalPrice: number;
-    cartTotalWithShipping: number;
-    finalValueWithDiscount: number;
 }
 
 interface CartItem {
+    id:number;
     name: string;
     price: number;
     category: string;
@@ -20,7 +19,7 @@ export const  useCartStore = defineStore({
     id: 'cart',
     state: (): CartState => ({
         cartItems: [] as CartItem[],
-        searchQuery: '',
+        searchQuery: '' as string,
     }),
     getters: {
         cartTotal: (state) => state.cartItems.reduce((count, item) => count + item.quantity, 0),

@@ -2,6 +2,7 @@
 
 export const menuItems = [
     {
+        id: 1,
         name: 'Classic Margherita',
         price: 12.99,
         category: 'Pizza',
@@ -11,6 +12,7 @@ export const menuItems = [
         image:'https://png.pngtree.com/png-vector/20230909/ourmid/pngtree-margherita-pizza-in-a-dish-png-image_10012685.png'
     },
     {
+        id: 2,
         name: 'Pepperoni Passion',
         price: 15.99,
         category: 'Pizza',
@@ -20,6 +22,7 @@ export const menuItems = [
         image:'https://png.pngtree.com/png-vector/20231215/ourlarge/pngtree-a-slice-pepperoni-pizza-clip-art-png-image_11324300.png'
     },
     {
+        id: 3,
         name: 'Mediterranean Delight',
         price: 16.99,
         category: 'Pizza',
@@ -29,6 +32,7 @@ export const menuItems = [
         image:'https://img.freepik.com/premium-photo/mediterranean-meze-delight-transparent-background_894067-17836.jpg'
     },
     {
+        id: 4,
         name: 'Supreme Feast',
         price: 17.99,
         category: 'Pizza',
@@ -38,6 +42,7 @@ export const menuItems = [
         image:'https://mymarios.com/pystedod/Meat-Feast-MARIOS2-MJ7094-29.5.2020-online-1.png'
     },
     {
+        id: 5,
         name: 'BBQ Chicken Delight',
         price: 18.99,
         category: 'Pizza',
@@ -47,6 +52,7 @@ export const menuItems = [
         image:'https://static.vecteezy.com/system/resources/previews/021/665/576/original/delicious-grilled-chicken-cutout-png.png'
     },
     {
+        id: 6,
         name: 'Veggie Extravaganza',
         price: 16.99,
         category: 'Pizza',
@@ -56,6 +62,7 @@ export const menuItems = [
         image:'https://tatis.my/demo/pizza/wp-content/uploads/2019/01/Product9-1.png'
     },
     {
+        id: 7,
         name: 'Hawaiian Paradise',
         price: 15.99,
         category: 'Pizza',
@@ -65,6 +72,7 @@ export const menuItems = [
         image:'https://png.pngtree.com/png-clipart/20231111/original/pngtree-dive-into-the-pineapple-paradise-of-hawaiian-pizza-png-image_13534949.png'
     },
     {
+        id: 8,
         name: 'Margherita Deluxe',
         price: 17.99,
         category: 'Pizza',
@@ -74,6 +82,7 @@ export const menuItems = [
         image:'https://png.pngtree.com/png-vector/20230909/ourmid/pngtree-margherita-pizza-in-a-dish-png-image_10012685.png'
     },
     {
+        id: 9,
         name: 'White Garlic Pizza',
         price: 14.99,
         category: 'Pizza',
@@ -83,6 +92,7 @@ export const menuItems = [
         image:'https://www.pngkit.com/png/detail/215-2154539_cheese-garlic-cheese-and-garlic-pizza.png',
     },
     {
+        id: 10,
         name: 'Meat Lovers\' Feast',
         price: 18.99,
         category: 'Pizza',
@@ -92,6 +102,7 @@ export const menuItems = [
         image:'https://www.nicepng.com/png/detail/2-23197_mega-meat-pizza-pizza.png'
     },
     {
+        id: 11,
         name: 'Classic Cheeseburger',
         price: 9.99,
         category: 'Burger',
@@ -101,6 +112,7 @@ export const menuItems = [
         image:'https://static.vecteezy.com/system/resources/previews/022/911/684/non_2x/classic-chicken-burger-free-illustration-icon-free-png.png'
     },
     {
+        id: 12,
         name: 'BBQ Bacon Burger',
         price: 11.99,
         category: 'Burger',
@@ -110,6 +122,7 @@ export const menuItems = [
         image: 'https://t4.ftcdn.net/jpg/05/85/29/13/360_F_585291348_nfsxpgUHUkphTWtkruvHW7lGvF6IdSvM.jpg',
     },
     {
+        id: 13,
         name: 'Veggie Burger Deluxe',
         price: 10.99,
         category: 'Burger',
@@ -119,6 +132,7 @@ export const menuItems = [
         image: 'https://static.vecteezy.com/system/resources/previews/022/598/687/original/tasty-beef-burger-png.png',
     },
     {
+        id: 14,
         name: 'Spicy Chicken Burger',
         price: 10.99,
         category: 'Burger',
@@ -128,6 +142,7 @@ export const menuItems = [
         image: 'https://t4.ftcdn.net/jpg/05/61/82/83/360_F_561828375_KCtTuNdpQTjHrMqDrcoCpoLaYhLrZQdI.jpg',
     },
     {
+        id: 15,
         name: 'Mushroom Swiss Burger',
         price: 11.99,
         category: 'Burger',
@@ -137,6 +152,7 @@ export const menuItems = [
         image: 'https://png.pngtree.com/png-clipart/20230928/original/pngtree-burger-png-images-png-image_13164941.png',
     },
     {
+        id: 16,
         name: 'Beyond Meat Burger',
         price: 12.99,
         category: 'Burger',
@@ -146,6 +162,7 @@ export const menuItems = [
         image: 'https://t3.ftcdn.net/jpg/06/01/07/12/360_F_601071205_jxLMJzJKNPM1g5ciDuW32Nj8vO5ltNhn.jpg',
     },
     {
+        id: 17,
         name: 'Double Bacon Cheeseburger',
         price: 13.99,
         category: 'Burger',
@@ -155,6 +172,7 @@ export const menuItems = [
         image:'https://t3.ftcdn.net/jpg/06/01/07/12/360_F_601071205_jxLMJzJKNPM1g5ciDuW32Nj8vO5ltNhn.jpg'
     },
     {
+        id: 18,
         name: 'Avocado Turkey Burger',
         price: 12.99,
         category: 'Burger',
@@ -164,6 +182,7 @@ export const menuItems = [
         image:'https://atlas-content-cdn.pixelsquid.com/stock-images/burger-8d8RmwB-600.jpg'
     },
     {
+        id: 19,
         name: 'Chocolate Lava Cake',
         price: 7.99,
         category: 'Dessert',
@@ -173,6 +192,7 @@ export const menuItems = [
         image:'https://ifigourmet.com/cdn/shop/products/22g242_1200x1200.png?v=1614894430',
     },
     {
+        id: 20,
         name: 'New York Cheesecake',
         price: 8.99,
         category: 'Dessert',
@@ -182,6 +202,7 @@ export const menuItems = [
         image:'https://static.vecteezy.com/system/resources/previews/025/065/317/non_2x/cheesecake-with-ai-generated-free-png.png',
     },
     {
+        id: 21,
         name: 'Tiramisu',
         price: 9.99,
         category: 'Dessert',
@@ -191,6 +212,7 @@ export const menuItems = [
         image:'https://png.pngtree.com/png-vector/20230902/ourmid/pngtree-tiramisu-cake-isolated-png-image_9242463.png',
     },
     {
+        id: 22,
         name: 'Fruit Sorbet Trio',
         price: 6.99,
         category: 'Dessert',
@@ -200,6 +222,7 @@ export const menuItems = [
         image:'https://5.imimg.com/data5/ME/QF/GLADMIN-33593898/trio-raspberry-vanilla-and-mango-bar-500x500.png',
     },
     {
+        id: 23,
         name: 'Caramel Pecan Brownie Sundae',
         price: 10.99,
         category: 'Dessert',
@@ -209,6 +232,7 @@ export const menuItems = [
         image:'https://png.pngtree.com/png-clipart/20210613/original/pngtree-browni-dessert-diet-meal-png-image_6404131.jpg',
     },
     {
+        id: 24,
         name: 'Classic Mojito',
         price: 6.99,
         category: 'Drinks',
@@ -218,6 +242,7 @@ export const menuItems = [
         image:'https://static.vecteezy.com/system/resources/previews/027/145/860/original/mojito-summer-refreshing-cocktail-with-ice-and-mint-perfect-for-drink-catalog-ai-generated-png.png',
     },
     {
+        id: 25,
         name: 'Strawberry Lemonade',
         price: 5.99,
         category: 'Drinks',
@@ -227,6 +252,7 @@ export const menuItems = [
         image:'https://static.vecteezy.com/system/resources/previews/027/243/027/original/strawberry-lemonade-sticker-cool-colors-kawaii-clip-art-illustration-transparent-background-generative-ai-png.png',
     },
     {
+        id: 26,
         name: 'Iced Caramel Macchiato',
         price: 7.99,
         category: 'Drinks',
@@ -236,6 +262,7 @@ export const menuItems = [
         image:'https://png.pngitem.com/pimgs/s/529-5290701_caff-macchiato-hd-png-download.png',
     },
     {
+        id: 27,
         name: 'Mango Tango Smoothie',
         price: 8.99,
         category: 'Drinks',
@@ -245,6 +272,7 @@ export const menuItems = [
         image:'https://png.pngtree.com/png-vector/20230325/ourmid/pngtree-summer-orange-smoothie-png-image_6667736.png',
     },
     {
+        id: 28,
         name: 'Green Tea Matcha Latte',
         price: 6.99,
         category: 'Drinks',
@@ -254,6 +282,7 @@ export const menuItems = [
         image:'https://www.pngitem.com/pimgs/b/69-690442_green-tea-transparent-images-green-tea-images-png.png',
     },
     {
+        id: 29,
         name: 'Pineapple Coconut Cooler',
         price: 7.99,
         category: 'Drinks',
@@ -263,6 +292,7 @@ export const menuItems = [
         image:'https://static.vecteezy.com/system/resources/previews/027/291/891/original/tropical-cocktail-with-pineapple-coconut-and-umbrella-on-transparent-background-free-png.png',
     },
     {
+        id: 30,
         name: 'Cucumber Mint Infused Water',
         price: 3.99,
         category: 'Drinks',
@@ -272,6 +302,7 @@ export const menuItems = [
         image:'https://img.freepik.com/premium-photo/detox-water-with-lemon-lime-cucumber-ginger-mint-ingredients-its-preparation-healthy-food-rich-vitamins-antioxidants_332246-220.jpg',
     },
     {
+        id: 31,
         name: 'Chai Tea Latte',
         price: 5.99,
         category: 'Drinks',
@@ -281,6 +312,7 @@ export const menuItems = [
         image:'https://d3gg7p8kl1yfy0.cloudfront.net/Recipe-Detail-Oat_Milk_Latte_2022.jpg',
     },
     {
+        id: 32,
         name: 'Blueberry Basil Lemonade',
         price: 6.99,
         category: 'Drinks',
@@ -290,6 +322,7 @@ export const menuItems = [
         image:'https://www.afarmgirlsdabbles.com/wp-content/uploads/2022/06/blueberry-basil-lemonade_afarmgirlsdabbles_01v.jpg',
     },
     {
+        id: 33,
         name: 'Espresso Martini',
         price: 9.99,
         category: 'Drinks',
@@ -299,6 +332,7 @@ export const menuItems = [
         image:'https://simply-delicious-food.com/wp-content/uploads/2023/05/Blackberry-lemonade3.jpg',
     },
     {
+        id: 34,
         name: 'Classic Pancake Stack',
         price: 9.99,
         category: 'Breakfast',
@@ -306,8 +340,9 @@ export const menuItems = [
         ratings: 4.6,
         discount: null,
         image:'https://pngimg.com/uploads/pancake/pancake_PNG120.png',
-      },
-      {
+    },
+    {
+        id: 35,
         name: 'Avocado Toast with Poached Eggs',
         price: 12.99,
         category: 'Breakfast',
@@ -315,8 +350,9 @@ export const menuItems = [
         ratings: 4.7,
         discount: null,
         image:'https://static.jow.fr/880x880/recipes/4nBoEEPf2543vg.png',
-      },
-      {
+    },
+    {
+        id: 36,
         name: 'Vegetarian Omelette',
         price: 11.99,
         category: 'Breakfast',
@@ -324,8 +360,9 @@ export const menuItems = [
         ratings: 4.5,
         discount: 10,
         image:'https://pngimg.com/d/omelette_PNG22.png',
-      },
-      {
+    },
+    {
+        id: 37,
         name: 'Greek Yogurt Parfait',
         price: 7.99,
         category: 'Breakfast',
@@ -333,8 +370,9 @@ export const menuItems = [
         ratings: 4.8,
         discount: null,
         image:'https://i.pinimg.com/736x/3f/cd/d3/3fcdd350062147e0c18ef7cb40b20721.jpg',
-      },
-      {
+    },
+    {
+        id: 38,
         name: 'Breakfast Burrito',
         price: 10.99,
         category: 'Breakfast',
@@ -342,8 +380,9 @@ export const menuItems = [
         ratings: 4.4,
         discount: null,
         image:'https://images.pngnice.com/download/2322/Breakfast-burrito-PNG-HD-Isolated.png',
-      },
-      {
+    },
+    {
+        id: 39,
         name: 'Butter Chicken',
         price: 15.99,
         category: 'Indian',
@@ -351,8 +390,9 @@ export const menuItems = [
         ratings: 3.1,
         discount: null,
         image:'https://static.vecteezy.com/system/resources/previews/025/228/103/original/fresh-indian-butter-chicken-with-rice-isolated-on-transparent-background-png.png',
-      },
-      {
+    },
+    {
+        id: 40,
         name: 'Chicken Biryani',
         price: 14.99,
         category: 'Indian',
@@ -360,8 +400,9 @@ export const menuItems = [
         ratings: 4.7,
         discount: 10,
         image:'https://png.pngtree.com/png-clipart/20230527/original/pngtree-chicken-biryani-top-view-png-image_9171063.png',
-      },
-      {
+    },
+    {
+        id: 41,
         name: 'Paneer Tikka Masala',
         price: 13.99,
         category: 'Indian',
@@ -369,8 +410,9 @@ export const menuItems = [
         ratings: 4.5,
         discount: null,
         image:'https://png.pngtree.com/png-clipart/20230912/original/pngtree-paneer-butter-masala-png-image_11051765.png',
-      },
-      {
+    },
+    {
+        id: 42,
         name: 'Vegetable Samosa',
         price: 8.99,
         category: 'Indian',
@@ -378,8 +420,9 @@ export const menuItems = [
         ratings: 4.6,
         discount: null,
         image:'https://img.pikbest.com/origin/09/19/91/64UpIkbEsT6m5.png!sw800',
-      },
-      {
+    },
+    {
+        id: 43,
         name: 'Dal Makhani',
         price: 12.99,
         category: 'Indian',
@@ -387,8 +430,9 @@ export const menuItems = [
         ratings: 4.4,
         discount: null,
         image:'https://t4.ftcdn.net/jpg/01/84/58/83/360_F_184588398_RczrKKQfy5GZWSd1rvCYu6GEPlsCd9rv.jpg',
-      },
-      {
+    },
+    { 
+        id: 44,
         name: 'Aloo Gobi',
         price: 11.99,
         category: 'Indian',
@@ -396,8 +440,9 @@ export const menuItems = [
         ratings: 4.3,
         discount: null,
         image:'https://www.pngitem.com/pimgs/m/317-3177451_aloo-gobi-png-download-transparent-png.png',
-      },
-      {
+    },
+    {
+        id: 45,
         name: 'Chana Masala',
         price: 10.99,
         category: 'Indian',
@@ -405,8 +450,9 @@ export const menuItems = [
         ratings: 4.6,
         discount: 15,
         image:'https://img.freepik.com/premium-photo/spicy-chickpea-curry-chana-masala-choley-bowl-with-chapati-salad-traditional-north-indian-dish_466689-6355.jpg',
-      },
-      {
+    },
+    {
+        id: 46,
         name: 'Tandoori Chicken',
         price: 16.99,
         category: 'Indian',
@@ -416,3 +462,77 @@ export const menuItems = [
         image:'https://www.pngitem.com/pimgs/m/119-1192275_tandoori-chicken-plate-png-transparent-png.png',
       },
 ];
+
+export const menuOptions = [
+    // Sauce Options
+    {
+      Optionid: 1,
+      OptionName: 'Sauce',
+      MultipleSelection: true,
+      type: 'Sauce',
+      items: [
+        { name: 'Garlic Sauce', price: 2.00 },
+        { name: 'Tomato Sauce', price: 2.00 },
+        { name: 'Spicy Marinara', price: 2.00 },
+        { name: 'Pesto Sauce', price: 2.00 },
+        { name: 'Alfredo Sauce', price: 2.00 },
+      ],
+    },
+  
+    // Drinks
+    {
+      Optionid: 2,
+      OptionName: 'Drink',
+      MultipleSelection: true,
+      type: 'Drinks',
+      items: [
+        { name: 'Coca-Cola', price: 2.00 },
+        { name: 'Sprite', price: 2.00 },
+        { name: 'Iced Tea', price: 2.00 },
+        { name: 'Orange Juice', price: 2.00 },
+        { name: 'Lemonade', price: 2.00 },
+      ],
+    },
+  
+    // Desserts
+    {
+      Optionid: 3,
+      OptionName: 'Dessert',
+      type: 'Dessert',
+      MultipleSelection: false,
+      items: [
+        { name: 'Chocolate Lava Cake', price: 3.00 },
+        { name: 'New York Cheesecake', price: 3.00 },
+        { name: 'Tiramisu', price: 3.00 },
+        { name: 'Fruit Sorbet Trio', price: 3.00 },
+        { name: 'Caramel Pecan Brownie Sundae', price: 3.00 },
+      ],
+    },
+  
+    // Additional Options
+    {
+      Optionid: 4,
+      OptionName: 'Custom Option 1',
+      MultipleSelection: true,
+      items: [
+        { name: 'Custom Item 1', price: 5.00 },
+        { name: 'Custom Item 2', price: 6.00 },
+        { name: 'Custom Item 3', price: 4.50 },
+        { name: 'Custom Item 4', price: 7.50 },
+        { name: 'Custom Item 5', price: 5.50 },
+      ],
+    },
+    {
+      Optionid: 5,
+      OptionName: 'Custom Option 2',
+      MultipleSelection: true,
+      items: [
+        { name: 'Custom Item 6', price: 8.00 },
+        { name: 'Custom Item 7', price: 5.50 },
+        { name: 'Custom Item 8', price: 4.00 },
+        { name: 'Custom Item 9', price: 6.50 },
+        { name: 'Custom Item 10', price: 7.00 },
+      ],
+    },
+    // ... Add more options as needed
+  ];

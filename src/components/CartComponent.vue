@@ -1,7 +1,7 @@
 <template>
   <div class="cart-container">
     <div class="Cart_Items">
-    <!--Cart Header-->
+      <!--Cart Header-->
       <div class="header_cart">
         <h2 class="title">Shopping Cart</h2>
         <h2 class="title">{{ cartStore.cartTotal }} Items</h2>
@@ -26,14 +26,52 @@
           class="cart-item"
         >
           <img :src="item.image" alt="" />
-          <div class="details">
+          <div class="Main_details">
             <h3>{{ item.name }}</h3>
-            <p>Price: ${{ item.price }}</p>
-            <p class="category">Category: {{ item.category }}</p>
-            <p class="Quantity">Quantity: {{ item.quantity }}</p>
-            <button @click="incrementQuantity(index)">+</button>
-            <button @click="decrementQuantity(index)">-</button>
-            <button @click="removeFromCart(index)">Remove</button>
+            <div class="details">
+              <div class="details1">
+                <p>
+                  Price: ${{ item.price.toFixed(2) }}
+                  <sup>
+                    + ${{
+                      calculateSelectedItemsPrice(item.additionalOptions)
+                    }}</sup
+                  >
+                </p>
+                <p class="category">Category: {{ item.category }}</p>
+                <p class="Quantity">Quantity: {{ item.quantity }}</p>
+                <button @click="incrementQuantity(index)">+</button>
+                <button @click="decrementQuantity(index)">-</button>
+                <button @click="removeFromCart(index)">Remove</button>
+              </div>
+              <div class="details2">
+                <div
+                  v-if="
+                    item.additionalOptions && item.additionalOptions.length > 0
+                  "
+                >
+                  <!-- Display selected items for each additional option -->
+                  <div
+                    v-for="option in item.additionalOptions"
+                    :key="option.Optionid"
+                    class="additional-option"
+                  >
+                    <p>{{ option.OptionName }}:</p>
+                    <ul>
+                      <li
+                        v-for="selectedItem in option.items.filter(
+                          (item) => item.selected
+                        )"
+                        :key="selectedItem.name"
+                      ><span>
+                        {{ selectedItem.name}}
+                      </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <!--All Cart's total Price Under the Cart Items-->
@@ -51,8 +89,16 @@
         <p>{{ cartStore.cartTotal }}</p>
       </div>
       <div class="total_Items">
+        <p>Aditional Items:</p>
+        <p>${{ sumOfAllAdditionalItemsWithQuantity }}</p>
+      </div>
+      <div class="total_Items">
         <p>Subtotals:</p>
         <p>${{ cartStore.cartTotalPrice.toFixed(2) }}</p>
+      </div>
+      <div class="total_Items">
+        <p>Final Total (with Additional Items):</p>
+        <p>${{ finalTotalWithAdditionalItems }}</p>
       </div>
       <div v-if="discount > 0" class="total_Items">
         <p>Discount:</p>
@@ -75,7 +121,7 @@
         <h4 class="discount">Your 5% Discoount Applied Successfully!!</h4>
         <div class="total_Items">
           <p>Discount Price:</p>
-          <p>${{ finalTotal }}</p>
+          <p>${{ (finalTotalWithAdditionalItems - discount).toFixed(2) }}</p>
         </div>
       </div>
       <div class="order_final">
@@ -85,14 +131,14 @@
           <p v-else>+0</p>
         </div>
         <hr />
+
         <div class="total_Items">
           <p>Total Payment:</p>
           <p>
             ${{
-              (Coupondiv
-                ? cartStore.cartTotalPrice + fee
-                : finalTotal + fee
-              ).toFixed(2)
+              Coupondiv
+                ? (finalTotalWithAdditionalItems - discount + fee).toFixed(2)
+                : (finalTotal + fee).toFixed(2)
             }}
           </p>
         </div>
@@ -105,14 +151,15 @@
 
 <script setup lang="ts">
 //import from vue & Store
-import { ref, watch } from "vue";
+import { ref, watch, computed } from "vue";
 import { useCartStore } from "../store/cart";
+import { isTemplateExpression } from "typescript";
 
 //Define the necessary variables & Store
 const cartStore = useCartStore();
 const couponCode = ref("");
-const finalTotal = ref(cartStore.cartTotalPrice);
-const discount = ref();
+const finalTotal = ref(0);
+const discount = ref(0);
 const Coupondiv = ref(true);
 const fee = ref(2);
 
@@ -148,18 +195,66 @@ watch(
 );
 // Apply a 5% discount
 const applyCoupon = (percent: number) => {
-  if (couponCode.value === "VUEJS") {
+  if (couponCode.value === "TAKA") {
     finalTotal.value = parseFloat(
-      (cartStore.cartTotalPrice * (1 - percent)).toFixed(2) + fee
+      (finalTotalWithAdditionalItems.value * (1 - percent)).toFixed(2) + fee
     );
     discount.value = parseFloat(
-      (cartStore.cartTotalPrice * percent).toFixed(2)
+      (finalTotalWithAdditionalItems.value * percent).toFixed(2)
     );
     Coupondiv.value = false;
   } else {
     alert("Invalid Coupon Code");
   }
 };
+
+const calculateSelectedItemsPrice = (additionalOptions) => {
+  let sum = 0;
+
+  if (additionalOptions && additionalOptions.length > 0) {
+    additionalOptions.forEach((option) => {
+      sum += option.items
+        .filter((item) => item.selected)
+        .reduce((acc, selectedItem) => acc + selectedItem.price, 0);
+    });
+  }
+
+  return sum.toFixed(2);
+};
+
+const sumOfAllAdditionalItems = computed(() => {
+  let totalSum = 0;
+
+  cartStore.cartItems.forEach((item) => {
+    if (item.additionalOptions && item.additionalOptions.length > 0 && item.quantity>0) {
+      item.additionalOptions.forEach((option) => {
+        totalSum += option.items
+          .filter((item) => item.selected)
+          .reduce((acc, selectedItem) => (acc + selectedItem.price* item.quantity) , 0);
+      });
+    } 
+  });
+
+  return totalSum.toFixed(2);
+});
+
+// New computed property for additional items with quantity
+const sumOfAllAdditionalItemsWithQuantity = computed(() => {
+  const additionalItemsSum = parseFloat(sumOfAllAdditionalItems.value);
+  const totalWithQuantity = additionalItemsSum;
+
+  return totalWithQuantity.toFixed(2);
+});
+
+const finalTotalWithAdditionalItems = computed(() => {
+  const subtotal = parseFloat(cartStore.cartTotalPrice);
+  const additionalItemsSum = parseFloat(
+    sumOfAllAdditionalItemsWithQuantity.value
+  );
+  const total = subtotal + additionalItemsSum;
+
+  return total.toFixed(2);
+});
 </script>
 
 <style lang="scss" scoped>
@@ -225,17 +320,28 @@ const applyCoupon = (percent: number) => {
         border-radius: 8px;
         object-fit: cover;
       }
-      .details {
+      .Main_details {
         margin-left: 15px;
         h3 {
           font-weight: 600;
           font-size: 24px;
           margin: 0px;
         }
-        p {
+        .details{
+          display: flex;
+          flex-direction: row;
+          justify-content: start;
+          align-items: start;
+          
+          .details1{
+            p {
           font-weight: 500;
           font-size: 16px;
           margin: 0px;
+          sup {
+            color: #ff7300;
+            font-size: 12px;
+          }
         }
         .category {
           font-weight: 500;
@@ -258,6 +364,44 @@ const applyCoupon = (percent: number) => {
             background-color: #fa801d;
           }
         }
+          }
+          .details2{
+            margin-left: 10px;
+            .additional-option{
+              display: flex;
+              flex-direction: row;
+              justify-content: start;
+              align-items: start;
+              p{
+                font-weight: 500;
+                font-size: 14px;
+                margin: 0px;
+              }
+              ul{
+                margin: 0px;
+                margin-left: 10px;
+                padding: 0px;
+                display: flex;
+                flex-direction: row;
+                justify-items: start;
+                align-items: start;
+                li{
+                  list-style: none;
+                  font-weight: 500;
+                  font-size: 11px;
+                  margin: 0px;
+                  span{
+                    font-weight: 500;
+                    font-size: 11px;
+                    margin: 0px;
+                    text-align: start;
+                  }
+                }
+              }
+            }
+          }
+        }
+      
       }
     }
     .cart-total {

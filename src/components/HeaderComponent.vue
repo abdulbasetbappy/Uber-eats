@@ -139,7 +139,7 @@ const closePopup = () => {
 
 // Handle the selection of a search result
 const selectSearchResult = (result: any) => {
-  console.log("Selected search result:", result);
+  console.log(selectedResult);
   selectedResult.value = result;
 };
 

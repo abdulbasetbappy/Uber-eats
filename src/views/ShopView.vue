@@ -58,7 +58,7 @@ const selectedLocation = ref('');
             height: 100%;
             border-radius: 18px;
             background-color: rgba(0, 0, 0, 0.699);
-            z-index: 1;
+            z-index: 0;
         }
         .title{
             font-family: 'poppins', sans-serif;

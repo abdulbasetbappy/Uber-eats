@@ -34,6 +34,7 @@
   import StarRating from './StarRating.vue';
   import { menuItems } from '../../data.ts';
   import { useCartStore } from '../store/cart';
+  import Popup from './Popup.vue';
 
   const cartStore = useCartStore();
   const categories = ref<string[]>([]);
